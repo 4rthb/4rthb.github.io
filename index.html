@@ -3,22 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arthur P. Baumgardt - Home Page!!!</title>
+<title>Arthur Prochnow Baumgardt — Software Engineer</title>
+<meta name="description" content="Arthur Prochnow Baumgardt — Software Engineer and R&D Engineer at IBOPE. Computer Engineering at UFRGS. Specializing in distributed systems, backend engineering (Go, Java, Python, C++), and high-performance computing.">
+<meta name="author" content="Arthur Prochnow Baumgardt">
+<meta name="keywords" content="Arthur Prochnow Baumgardt, Software Engineer, R&D Engineer, IBOPE, UFRGS, Go, Golang, distributed systems, backend, HPC, CUDA, Porto Alegre">
+<link rel="canonical" href="https://arthurpb.dev.br/">
+
+<!-- Open Graph (LinkedIn, WhatsApp, Facebook) -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Arthur Prochnow Baumgardt — Software Engineer">
+<meta property="og:description" content="Software Engineer & R&D Engineer at IBOPE. Distributed systems, backend engineering, and HPC.">
+<meta property="og:url" content="https://arthurpb.dev.br/">
+<meta property="og:locale" content="en_US">
+<meta property="profile:first_name" content="Arthur">
+<meta property="profile:last_name" content="Prochnow Baumgardt">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Arthur Prochnow Baumgardt — Software Engineer">
+<meta name="twitter:description" content="Software Engineer & R&D Engineer at IBOPE. Distributed systems, backend engineering, and HPC.">
+
+<!-- Structured data for search engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Arthur Prochnow Baumgardt",
+  "jobTitle": "Software Engineer",
+  "worksFor": { "@type": "Organization", "name": "IBOPE" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidade Federal do Rio Grande do Sul (UFRGS)" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Porto Alegre", "addressRegion": "RS", "addressCountry": "BR" },
+  "email": "b_arthp@outlook.com",
+  "url": "https://arthurpb.dev.br/",
+  "sameAs": [
+    "https://linkedin.com/in/arthurpb",
+    "https://github.com/4rthb"
+  ],
+  "knowsAbout": ["Distributed Systems", "Backend Engineering", "High-Performance Computing", "Go", "C++", "Python", "Elasticsearch"]
+}
+</script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap');
-
-  :root {
-    --win-gray: #c0c0c0;
-    --win-dark: #808080;
-    --win-darker: #404040;
-    --win-white: #ffffff;
-    --win-blue: #000080;
-    --win-cyan: #008080;
-    --win-yellow: #ffff00;
-    --win-red: #ff0000;
-    --win-lime: #00ff00;
-    --win-orange: #ff8000;
-  }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -33,374 +58,279 @@
     cursor: default;
   }
 
-  /* ===== TASKBAR ===== */
+  /* TASKBAR */
   .taskbar {
     position: fixed;
     bottom: 0; left: 0; right: 0;
     height: 28px;
-    background: var(--win-gray);
-    border-top: 2px solid var(--win-white);
+    background: #c0c0c0;
+    border-top: 2px solid #ffffff;
     display: flex;
     align-items: center;
     gap: 4px;
     padding: 0 4px;
     z-index: 1000;
-    box-shadow: 0 -1px 0 var(--win-dark);
+    box-shadow: 0 -1px 0 #808080;
   }
   .start-btn {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    background: var(--win-gray);
-    border: 2px solid;
-    border-color: var(--win-white) var(--win-darker) var(--win-darker) var(--win-white);
+    display: flex; align-items: center; gap: 4px;
+    background: #c0c0c0;
+    border: 2px solid; border-color: #fff #404040 #404040 #fff;
     padding: 2px 8px;
-    font-family: 'VT323', monospace;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
+    font-family: 'VT323', monospace; font-size: 16px; font-weight: bold; cursor: pointer;
   }
-  .start-btn:active { border-color: var(--win-darker) var(--win-white) var(--win-white) var(--win-darker); }
-  .windows-logo { font-size: 14px; }
+  .start-btn:active { border-color: #404040 #fff #fff #404040; }
   .taskbar-time {
     margin-left: auto;
-    border: 2px solid;
-    border-color: var(--win-darker) var(--win-white) var(--win-white) var(--win-darker);
+    border: 2px solid; border-color: #808080 #fff #fff #808080;
     padding: 2px 8px;
-    font-family: 'VT323', monospace;
-    font-size: 16px;
+    font-family: 'VT323', monospace; font-size: 16px;
   }
   .taskbar-item {
-    border: 2px solid;
-    border-color: var(--win-darker) var(--win-white) var(--win-white) var(--win-darker);
+    border: 2px solid; border-color: #808080 #fff #fff #808080;
     padding: 2px 8px;
-    font-family: 'VT323', monospace;
-    font-size: 15px;
-    background: var(--win-gray);
+    font-family: 'VT323', monospace; font-size: 15px; background: #c0c0c0;
   }
 
-  /* ===== WINDOW BASE ===== */
+  /* WINDOW */
   .window {
-    background: var(--win-gray);
-    border: 2px solid;
-    border-color: var(--win-white) var(--win-darker) var(--win-darker) var(--win-white);
-    box-shadow: 2px 2px 0 var(--win-darker);
+    background: #c0c0c0;
+    border: 2px solid; border-color: #fff #404040 #404040 #fff;
+    box-shadow: 2px 2px 0 #404040;
     margin-bottom: 12px;
   }
   .title-bar {
-    background: linear-gradient(90deg, var(--win-blue), #1084d0);
-    color: white;
-    padding: 3px 6px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: 'VT323', monospace;
-    font-size: 17px;
-    font-weight: bold;
+    background: linear-gradient(90deg, #000080, #1084d0);
+    color: white; padding: 3px 6px;
+    display: flex; align-items: center; justify-content: space-between;
+    font-family: 'VT323', monospace; font-size: 17px; font-weight: bold;
     user-select: none;
   }
-  .title-bar-btns {
-    display: flex;
-    gap: 2px;
-  }
+  .title-bar-btns { display: flex; gap: 2px; }
   .title-bar-btn {
-    width: 16px; height: 14px;
-    background: var(--win-gray);
-    border: 1px solid;
-    border-color: var(--win-white) var(--win-darker) var(--win-darker) var(--win-white);
-    font-size: 9px;
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer;
-    font-family: monospace;
+    width: 16px; height: 14px; background: #c0c0c0;
+    border: 1px solid; border-color: #fff #404040 #404040 #fff;
+    font-size: 9px; display: flex; align-items: center; justify-content: center;
+    cursor: pointer; font-family: monospace;
   }
   .window-content {
     padding: 10px;
-    border: 2px solid;
-    border-color: var(--win-darker) var(--win-white) var(--win-white) var(--win-darker);
+    border: 2px solid; border-color: #808080 #fff #fff #808080;
     margin: 4px;
   }
 
-  /* ===== LAYOUT ===== */
-  .desktop {
-    max-width: 900px;
-    margin: 0 auto;
-    padding-bottom: 40px;
-  }
+  /* LAYOUT */
+  .desktop { max-width: 900px; margin: 0 auto; padding-bottom: 40px; }
 
-  /* ===== MARQUEE HEADER ===== */
+  /* MARQUEE */
   .header-window {
-    background: var(--win-gray);
-    border: 2px solid;
-    border-color: var(--win-white) var(--win-darker) var(--win-darker) var(--win-white);
-    box-shadow: 2px 2px 0 var(--win-darker);
-    margin-bottom: 12px;
-    overflow: hidden;
+    background: #c0c0c0;
+    border: 2px solid; border-color: #fff #404040 #404040 #fff;
+    box-shadow: 2px 2px 0 #404040;
+    margin-bottom: 12px; overflow: hidden;
   }
   .marquee-bar {
-    background: var(--win-blue);
-    color: var(--win-yellow);
-    font-size: 22px;
-    padding: 4px 0;
-    white-space: nowrap;
-    overflow: hidden;
+    background: #000080; color: #ffff00;
+    font-size: 22px; padding: 4px 0;
+    white-space: nowrap; overflow: hidden;
   }
   .marquee-inner {
     display: inline-block;
-    animation: marquee 18s linear infinite;
+    animation: marquee 20s linear infinite;
     padding-left: 100%;
   }
   @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
 
-  /* ===== PROFILE SECTION ===== */
-  .profile-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  .profile-left {
-    width: 160px;
-    vertical-align: top;
-    padding-right: 12px;
-    text-align: center;
-  }
+  /* PROFILE */
+  .profile-table { width: 100%; border-collapse: collapse; }
+  .profile-left { width: 170px; vertical-align: top; padding-right: 14px; text-align: center; }
   .avatar {
-    width: 120px;
-    height: 120px;
-    background: var(--win-blue);
-    border: 3px solid;
-    border-color: var(--win-darker) var(--win-white) var(--win-white) var(--win-darker);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 64px;
-    margin: 0 auto 8px;
-    color: var(--win-cyan);
+    width: 130px; height: 130px;
+    border: 3px solid; border-color: #404040 #fff #fff #404040;
+    display: block; margin: 0 auto 8px;
+    object-fit: cover;
+    image-rendering: pixelated;
   }
   .visitor-counter {
-    background: #000;
-    color: var(--win-lime);
-    font-family: 'VT323', monospace;
-    font-size: 20px;
-    border: 2px inset #555;
-    padding: 3px 6px;
-    display: inline-block;
-    margin-top: 6px;
-    letter-spacing: 2px;
+    background: #000; color: #00ff00;
+    font-family: 'VT323', monospace; font-size: 20px;
+    border: 2px inset #555; padding: 3px 6px;
+    display: inline-block; margin-top: 6px; letter-spacing: 2px;
   }
   .profile-right { vertical-align: top; }
   .name-banner {
-    font-family: 'Press Start 2P', monospace;
-    font-size: 13px;
-    color: var(--win-blue);
-    margin-bottom: 6px;
-    line-height: 1.6;
-    text-shadow: 2px 2px var(--win-dark);
+    font-family: 'Press Start 2P', monospace; font-size: 18px;
+    color: #000080; margin: 0 0 12px 0; line-height: 1.9;
+    text-shadow: 2px 2px #808080;
   }
-  .subtitle {
-    color: var(--win-cyan);
-    font-size: 20px;
-    margin-bottom: 8px;
-  }
+  .subtitle { color: #008080; font-size: 20px; margin-bottom: 8px; }
   .contact-list { list-style: none; }
-  .contact-list li {
-    font-size: 17px;
-    margin-bottom: 2px;
-    color: var(--win-blue);
-  }
-  .contact-list a { color: var(--win-blue); }
-  .contact-list a:hover { color: var(--win-red); }
+  .contact-list li { font-size: 17px; margin-bottom: 3px; color: #000080; }
+  .contact-list a { color: #000080; }
+  .contact-list a:hover { color: #ff0000; }
 
-  /* ===== DIVIDER ===== */
+  /* DIVIDERS */
   .divider {
     height: 6px;
-    background: repeating-linear-gradient(90deg, var(--win-red) 0px, var(--win-red) 6px, var(--win-yellow) 6px, var(--win-yellow) 12px, var(--win-lime) 12px, var(--win-lime) 18px, var(--win-blue) 18px, var(--win-blue) 24px);
-    margin: 6px 0;
-    border: 1px solid var(--win-darker);
+    background: repeating-linear-gradient(90deg, #ff0000 0px, #ff0000 6px, #ffff00 6px, #ffff00 12px, #00ff00 12px, #00ff00 18px, #000080 18px, #000080 24px);
+    margin: 6px 0; border: 1px solid #404040;
   }
   hr.win95 {
-    border: none;
-    border-top: 2px solid var(--win-darker);
-    border-bottom: 1px solid var(--win-white);
-    margin: 8px 0;
+    border: none; border-top: 2px solid #808080;
+    border-bottom: 1px solid #fff; margin: 8px 0;
   }
 
-  /* ===== SECTIONS ===== */
+  /* SECTION TITLE */
   .section-title {
-    font-family: 'Press Start 2P', monospace;
-    font-size: 10px;
-    color: var(--win-blue);
-    margin-bottom: 8px;
-    background: var(--win-yellow);
-    padding: 4px 8px;
+    font-family: 'Press Start 2P', monospace; font-size: 9px;
+    color: #000080; margin-bottom: 10px;
+    background: #ffff00; padding: 4px 8px;
     display: inline-block;
-    border: 2px solid;
-    border-color: var(--win-darker) var(--win-white) var(--win-white) var(--win-darker);
+    border: 2px solid; border-color: #404040 #fff #fff #404040;
   }
 
-  /* ===== EXPERIENCE TABLE ===== */
-  .exp-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 17px;
-  }
+  /* EXPERIENCE */
+  .exp-table { width: 100%; border-collapse: collapse; font-size: 17px; }
   .exp-table td { padding: 4px 6px; vertical-align: top; }
-  .exp-table tr:nth-child(odd) { background: rgba(0,0,128,0.07); }
-  .company-name {
-    font-weight: bold;
-    color: var(--win-blue);
-    font-size: 19px;
-  }
-  .job-title { color: var(--win-cyan); font-size: 16px; }
-  .job-date { color: var(--win-darker); font-size: 15px; white-space: nowrap; }
+  .exp-table tr:nth-child(odd) { background: rgba(0,0,128,0.06); }
+  .company-name { font-weight: bold; color: #000080; font-size: 19px; }
+  .job-title { color: #008080; font-size: 16px; }
+  .job-date { color: #404040; font-size: 15px; white-space: nowrap; }
   .exp-bullets { list-style: none; }
-  .exp-bullets li::before { content: "► "; color: var(--win-red); }
-  .exp-bullets li { margin-bottom: 2px; font-size: 16px; }
+  .exp-bullets li::before { content: "► "; color: #ff0000; }
+  .exp-bullets li { margin-bottom: 3px; font-size: 16px; line-height: 1.3; }
 
-  /* ===== SKILLS ===== */
-  .skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
+  /* SKILLS */
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .skill-box {
-    background: #000080;
-    color: #fff;
-    border: 2px solid;
-    border-color: var(--win-white) var(--win-darker) var(--win-darker) var(--win-white);
-    padding: 6px 10px;
-    font-size: 16px;
+    background: #000080; color: #fff;
+    border: 2px solid; border-color: #fff #404040 #404040 #fff;
+    padding: 7px 10px; font-size: 16px;
   }
-  .skill-box-title {
-    color: var(--win-yellow);
-    font-size: 14px;
-    margin-bottom: 4px;
-    font-weight: bold;
-  }
+  .skill-box-title { color: #ffff00; font-size: 14px; margin-bottom: 5px; font-weight: bold; }
   .skill-tag {
-    display: inline-block;
-    background: var(--win-gray);
-    color: #000;
-    border: 1px solid var(--win-darker);
-    padding: 1px 5px;
-    margin: 2px 2px;
-    font-size: 15px;
+    display: inline-block; background: #c0c0c0; color: #000;
+    border: 1px solid #404040; padding: 1px 5px;
+    margin: 2px 2px; font-size: 15px;
   }
 
-  /* ===== PROJECTS ===== */
+  /* PROJECTS */
   .project-box {
     background: #fff;
-    border: 2px solid;
-    border-color: var(--win-darker) var(--win-white) var(--win-white) var(--win-darker);
-    padding: 8px;
-    margin-bottom: 8px;
+    border: 2px solid; border-color: #808080 #fff #fff #808080;
+    padding: 8px; margin-bottom: 8px;
   }
-  .project-title { color: var(--win-blue); font-size: 19px; font-weight: bold; }
-  .project-desc { font-size: 16px; color: #222; }
+  .project-title { color: #000080; font-size: 18px; font-weight: bold; }
+  .project-desc { font-size: 16px; color: #222; margin-top: 3px; line-height: 1.3; }
 
-  /* ===== RESEARCH ===== */
+  /* RESEARCH */
   .research-box {
     background: #ffffd0;
-    border: 2px solid;
-    border-color: var(--win-darker) var(--win-white) var(--win-white) var(--win-darker);
-    padding: 8px;
-    font-size: 16px;
+    border: 2px solid; border-color: #808080 #fff #fff #808080;
+    padding: 8px; margin-bottom: 8px; font-size: 16px;
   }
-  .research-title { color: var(--win-blue); font-size: 18px; font-weight: bold; }
+  .research-title { color: #000080; font-size: 17px; font-weight: bold; line-height: 1.3; }
 
-  /* ===== GUESTBOOK / FUN ===== */
+  /* GUESTBOOK */
   .guestbook {
-    background: #fff;
-    border: 2px inset #888;
-    padding: 6px;
-    font-size: 15px;
-    width: 100%;
-    height: 60px;
-    resize: none;
-    font-family: 'VT323', monospace;
+    background: #fff; border: 2px inset #888;
+    padding: 6px; font-size: 15px; width: 100%; height: 60px;
+    resize: none; font-family: 'VT323', monospace;
   }
   .win-btn {
-    background: var(--win-gray);
-    border: 2px solid;
-    border-color: var(--win-white) var(--win-darker) var(--win-darker) var(--win-white);
-    padding: 3px 16px;
-    font-family: 'VT323', monospace;
-    font-size: 17px;
-    cursor: pointer;
-    margin-top: 4px;
+    background: #c0c0c0;
+    border: 2px solid; border-color: #fff #404040 #404040 #fff;
+    padding: 3px 16px; font-family: 'VT323', monospace;
+    font-size: 17px; cursor: pointer; margin-top: 4px;
   }
-  .win-btn:active { border-color: var(--win-darker) var(--win-white) var(--win-white) var(--win-darker); }
+  .win-btn:active { border-color: #404040 #fff #fff #404040; }
 
-  /* ===== DECORATIONS ===== */
+  /* FX */
   .blink { animation: blink 1s step-end infinite; }
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-
   .under-construction {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 16px;
-    color: var(--win-red);
-    background: var(--win-yellow);
-    border: 2px solid var(--win-darker);
-    padding: 3px 8px;
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 15px; color: #ff0000; background: #ffff00;
+    border: 2px solid #404040; padding: 3px 8px;
   }
-
-  .best-viewed {
-    font-size: 13px;
-    color: var(--win-darker);
-    text-align: center;
-    margin-top: 4px;
-  }
-
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .stars { color: #ff8000; font-size: 20px; }
+  .best-viewed { font-size: 13px; color: #555; text-align: center; margin-top: 6px; }
 
-  /* progress bar win95 */
-  .progress-outer {
-    background: var(--win-darker);
-    border: 2px solid;
-    border-color: var(--win-darker) var(--win-white) var(--win-white) var(--win-darker);
-    height: 18px;
-    margin-bottom: 4px;
-  }
-  .progress-inner {
-    height: 100%;
-    background: var(--win-blue);
-    display: flex;
-    align-items: center;
-    padding-left: 4px;
-    color: #fff;
-    font-size: 13px;
-  }
-
-  /* gif-like spinning stars */
-  .stars { color: var(--win-yellow); font-size: 22px; }
-  .spin { display: inline-block; animation: spin 2s linear infinite; }
-  @keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
-
-  /* ===== SCROLLBAR (webkit) ===== */
   ::-webkit-scrollbar { width: 16px; }
-  ::-webkit-scrollbar-track { background: var(--win-gray); }
+  ::-webkit-scrollbar-track { background: #c0c0c0; }
   ::-webkit-scrollbar-thumb {
-    background: var(--win-gray);
-    border: 2px solid;
-    border-color: var(--win-white) var(--win-darker) var(--win-darker) var(--win-white);
+    background: #c0c0c0;
+    border: 2px solid; border-color: #fff #404040 #404040 #fff;
   }
+
+  @media (max-width: 600px) {
+    body { padding: 6px; font-size: 16px; }
+
+    /* Stack profile vertically */
+    .profile-table, .profile-table tbody,
+    .profile-table tr, .profile-table td {
+      display: block; width: 100%;
+    }
+    .profile-left {
+      width: 100%; padding-right: 0;
+      display: flex; flex-direction: column; align-items: center;
+      margin-bottom: 12px;
+    }
+
+    /* Stack columns */
+    .two-col { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr; }
+
+    /* Stack exp table */
+    .exp-table, .exp-table tbody,
+    .exp-table tr, .exp-table td { display: block; width: 100%; }
+    .exp-table td { text-align: left !important; }
+
+    /* Fonts */
+    .name-banner { font-size: 14px; line-height: 1.7; }
+    .section-title { font-size: 8px; }
+    .title-bar { font-size: 14px; }
+    .title-bar span {
+      white-space: nowrap; overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: calc(100% - 60px);
+      display: inline-block;
+    }
+
+    /* Hide taskbar label on mobile */
+    .taskbar-item { display: none; }
+
+    /* Smaller marquee */
+    .marquee-bar { font-size: 17px; }
+
+    /* Tighter padding */
+    .window-content { padding: 8px; margin: 3px; }
+
+    /* Avatar */
+    .avatar { width: 110px; height: 110px; }
+
+    /* Wrap skill tags */
+    .skill-box { word-break: break-word; }
+  }
+
 </style>
 </head>
 <body>
 
 <!-- TASKBAR -->
 <div class="taskbar">
-  <button class="start-btn"><span class="windows-logo">⊞</span> Start</button>
-  <div class="taskbar-item">🖥️ Arthur's Page</div>
+  <button class="start-btn">⊞ Start</button>
+  <div class="taskbar-item">🖥️ Arthur's Portfolio</div>
   <div class="taskbar-time" id="clock">12:00</div>
 </div>
 
 <div class="desktop">
 
-  <!-- HEADER WINDOW -->
+  <!-- HEADER -->
   <div class="header-window">
     <div class="title-bar">
-      <span>🌐 Arthur Prochnow Baumgardt - Personal Home Page!!!</span>
+      <span>🌐 Arthur Prochnow Baumgardt — Personal Home Page!!!</span>
       <div class="title-bar-btns">
         <div class="title-bar-btn">_</div>
         <div class="title-bar-btn">□</div>
@@ -409,46 +339,43 @@
     </div>
     <div class="marquee-bar">
       <div class="marquee-inner">
-        ★彡 WELCOME TO MY HOMEPAGE! ★彡 &nbsp;&nbsp;&nbsp; 
-        Computer Engineering @ UFRGS &nbsp;&nbsp;&nbsp; 
-        ★ Software Engineer ★ &nbsp;&nbsp;&nbsp;
-        Based in Porto Alegre - RS - BRAZIL 🇧🇷 &nbsp;&nbsp;&nbsp;
-        ✉ b_arthp@outlook.com &nbsp;&nbsp;&nbsp;
-        💾 Best viewed in 800x600 &nbsp;&nbsp;&nbsp;
-        ★彡 WELCOME TO MY HOMEPAGE! ★彡 &nbsp;&nbsp;&nbsp;
+        ★彡 WELCOME TO MY PAGE! ★彡 &nbsp;&nbsp;&nbsp;
+        Computer Engineering @ UFRGS &nbsp;&nbsp;&nbsp;
+        ★ Software Engineer ★ R&amp;D Engineer @ IBOPE &nbsp;&nbsp;&nbsp;
+        Porto Alegre — RS — Brazil 🇧🇷 &nbsp;&nbsp;&nbsp;
+        Go · Elasticsearch · Distributed Systems · HPC &nbsp;&nbsp;&nbsp;
+        ★彡 WELCOME TO MY PAGE! ★彡 &nbsp;&nbsp;&nbsp;
       </div>
     </div>
     <div class="window-content">
       <table class="profile-table">
         <tr>
           <td class="profile-left">
-            <div class="avatar">👨‍💻</div>
-            <div style="font-size:13px; color:var(--win-darker);">Visitor Count:</div>
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCADIAMgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwC8DTwaYKcD0rxj0SRTUmaiFOBoAmB4pwqEGnq1AD80uaaGpc0AOpwOKZmlFAEoNPWolNUL/wATaRpUix3d9EkjZAUcn8cdKVgNcUoNcdP8TdItpNhinkXP30Knj6Zq/Y/EDw/eMFa8+zOeizrt/WlZjudIKcAKjjkSWNZI3V0YZDKcginjmmA/FFNzSg8UCHUoNIKKYDgaXdTaKAH7qM0gooAXNFFFAHL0tNzRSAeDTgc1HRupgTBqUNjmot3NIXoAseZml31V8z3pPNHrQBb8z3pslwkMTyyuqIg3MxOABWPrPiKw0K2Nxe3CoOioOWc+gFeZeJPG11r5KGT7LYjkQg8t/vHvTUWwuX/FvxF1DUrprbTHa109Tt8wfflP4fy/OuYNyzybpTKzHu45qNdRhgbdGqlsYz6fien4U1795mwSc1so+RNyTzycuF2qOAzc1A80K7jJFk/xMzYqN7gsclvMc9APur+Pc1CYmnfB+Zcke2atITZ0eh+MtS0nalleTwxE/IrtvT64r1Dw38S7K/gEervFZXKnaTn5HPqPT6V4o2FJCDttXH5D+VSmV5DGAwLJwe4YehFRKmmCZ9MxzRzxrJE6vG3KspyD+NOFeb+AbxHs2m06QwSxsEubNiTGf9pfTP8A9avRIZfMQN0PcVgWTg0UwN+NP7UALS00U9aAHA0YpBS5oAKKAaKBHK0UgOaM0ihSaTPFBNNYgUAOLVG0lIzioJJKAHPN71znjHxHqGg2K3NlbwupO1pJDnYe3HetiWYICTz9K8q8feIxrN8LS2l/0a1BLMOm88Z/AfzrSnG7Jk9DH1HVbrVbtru/ut8z9gMYHpjsKr/6ETukkXce5OW/SsWeJwNxOSefemwXPlYwuCD3rsVPTQy5jezDGB5cBJboG4/E+n86cAqryFLdwvQVQt7wbSzucnqzHFWUu0dMRhpD7DC//XqWh3LQVdoLEsfQdqlTCENIwB/uj+Een1qBLW7kYOW2jqABgD/GtKx0i4dtxG4dc9P1rOUki1FsZg+UNqkuTnOMBfSq0EMkBVsE4Ygg9xXSQ6VKyhQvPsKdqmjNZ2yAp85PzD0FR7Xoaui0rlnw7qUmlXyXttnldrg9HXqM/wCeor13RdWh1S3SZPlLjO3PX6HvXj2nwHy0TbhtxjGe/cCtTw9rUuh3Sjk2krgEMf8AVt/hWL3BrQ9iFSDpVWxu1uow3qAQf7wq3kUiRMYpQKP604dKYhCSKSnMKbigBQKKUUUAcmGo3UzIpC1IocWpjNmgmo3amJsSR8VVlk9OKdK9VJ5QBQScl4+8RSWcA0+0cxvKMyyDqqnsPc15vuBAjRQF649T711/jqEi8EqkFpj0PYdM/wCfSuQmnNowVcN7kda6aa00JaGvEQ2H5z+tPNlDs5GGJ+lWoHimUFNozzsb+lTtYmYjMbkDgAGqc7FKFzNTTImIJYKPXBNaMNn5ZXyiTjoMVbstCmmcBEYfU11ukeEX3KZS2c8nFZzreZrTw7b2MrStKnnILISO4rsbDQSygsmMfw1uaTpMFojx7ByQavz7YziEDp0IrhlUbZ6MKCijHt9JjtyWwc46ntVLUNN+0hlwOcD8Sa2nu8giR0iYdN2eaktoUu3AiBOTnOOtRzNaluCtY5K5082cEjEHcGV19qzLmHdJLkfu5RvwP1x9DzXpWueHGbS1m28kkke3QVwdxAIIYwzZ8slTn/P0rSnO5yVadjrPh3qz3FtLptw+6SDmNj1x6fyrtx0ryzwVvt/EsaHADhx+XT9DXqanitTkaFpwPFNFOFMkfSYFA6UGgAFFKBRQBxdJmkzTSaAbHM2BULscU4moXNAiGV6oXDE8+nb1q1K1UJ2wKpAjz7xvIRqA3MMFM/QCuVj8x3RF6N2JzXQeN5C+pTAnnYq/QY/+vXP6T+8vIkxyrbfwIrqgvduTfWxrabp8s8gUoDz949BXYafocWVBArIt7hbchIzjHJOOpq0L7Uw+VRyoHGB0rGSbOunZHcadp8FsFxGOPauhjjjKAoBxXmln4ivYX/ehiB2auv0vXlkUZYA1zzps7qU09jofJIO85G0c49KmgVX2P2I4yMYqvY3qzRnPU/rTbuWb/VRA5B6isbG5twQxuwBRT+Fa9pYxAcgDmvPp72/tkAj3s/3jk4osNc1t5QjLOf8Aa3ZA96fs7mbqo9KvoPMjWIL8pPPFeOeLbFrC9vLYjGWDgegz/wDXr1DSLy7aEGcSMR/EwyG+lcL8Vrc/2rbSqMedCGB9CDyfyqYRszGs7xOT0i/ktryK4BxKrZXJ/MfjivYrG6S8tYbiPlJFDD8a8MuJhHqo8vhV2uM/TnP/AH1XsnhYbdHgTJIXIGfSulo89myOlPApFpwFIkWkxS0UwEooooEcMTSE0hNITQJiMahkapCahc00CK0x61n3Jq9Maz7g9aoZ534zj/4nYz0lhBz9MisPw9bl9aEZHSMn8RXWeMrcPJbT45UMhPt/nNZ/hOw82+mnccY2rW6naBMY3ki+rQ6YjTTAM2eAe5pH8Vak4C2ti8ytwCAVUf1rcn8P/aJFkXkjoD0q9aWVzbkDyouO9ZKceqOv2crWTscyzX0qs89tMh37V25JYY67T2/GnGW7sGjJ3bW7EYI/CupuILiTJyD2yBgCsS6tFQkkl29TQ5JlqEkd/wCB7kXSJuG/sQa6HxRus49lnEolK5Ncp8OFYT47Dmu812yXUG2kkErkEcVxy0mejFOVPTc8T1PUNUnaaVWudyfdTYyg89h1NaPhLW9d8/D+UEjUsyOWV2OeAhwdxP04rp7jQLiCYyK/mgHgtyfxrY0i8ltGXzLWNh3rodWKja1zidGble7RveFvFcN/KtheW0tvIy7o3mi2EnurDpke3BrG+LlkltaWN6B8iF4jx2OD/jW8sw1iSHzIFQRnK4FR/EzSzfeB5mALG3dJMeq5wf0Ncqd5G1SD5WeEyI016+05JJkJB7Y7V7P4ZBGiWeTkmMHNeQ6NBsnd5MY3bVH4cn9MV7TYCMWkPlACPYu0DsMV0tnmNF9DxTxUadKkpCFpCaWkpiYCil6UUCOBJpCabupN2aBCk5qJ6cWqJmpoEV5u9Z1wOtaE1UZ6pAzntbtlurR1Yfd+YfUVj+H5hBctCcZK7h+fP866S7jDqy9iCK4+Rm0/Wo2PClyjfQ/5FWldWKp7no1jJvCjNbKW6smSoPfFcppdyQ3XpXSQ3h8snJGPWueasetRaaEv40jibsAM1x87PclpEwsSnqe9b2rXvnRMgOARiuP1BrqS0W3gkeCRW++FBDCrpxuTVaPSfh3byRvuYj58beetek30N3Fbxs1izZPBB6+9eQ/D/UZomtorqREZJBuYA4ZfUV2+v6t4zutXW4s9ctl0pXULawQDcV77mOST9MVlOPvO50U5+6kkWL4J83BBzyp6j2qvbKrvg8d6k1u4lu2kujHtcqMj3Axn8ay9L1RJJMbvmBwRWSN9Edpo1udwHvwMVoeNFS28JX4fo8YUD1JIpnhtfNZSelQ/E+cJ4fhXGd9yq49cA0bHPXetkeKi1aJJ2AIxuZTjt1/lXpGgSebo9m/TMQ/wrjYbGa81A2QCqPIZJB1zzzj8wK7nT4Ba2kEA/wCWaBfrgVvHueVVteyLy1KKiSpRTMhaUCm5pc0yRaKTNFAHne6kLU3NNLU0hIVmqNmpCajY0xiSmqU1WZDVWY9aoRQnHWsDUrSOS4V5FBzwM+orfnOQa53xKrHTZmUkMg3AjqDVJXdhRlyu5o2UhSQHOAetdFNMUghUAky8n6CuL0K5N1psEpYlwoDE9dw4NdxaNDc6XGzY3x5Gfasaisz0qEroxrmYPIVzk/yqOO3iZgZJEB9M1U1fR5DMZbe8mjDHO3gioLXSnzia5uvqhH+FaJK25Su5WZ2FrZxSIv2d0JAz8rAYrptHaTCJ58St0I3Zya4O10ny13x395v4GML/AIV1eg6Bd3JXZe3jP7hQPzxWc4rudkKdjtYtLuJoSzBSuOv9a8/8QGPT9S8y3mUXETgSop+8v+Irt5vCGotYZutavIY+6QOFZvbcBXJ3Hhe3snCQxECSTJzkk+5J61inGPUUrvY9R8EyCeySRupAOaseLWg+yR+eV4LFFJ5ZsY4/Ol8NWgstPhUDBKjivPvHviFZPiJDaI4MOn2ohl9mkIYn8P3f61EFzM5683B8yLFjZRwStNj944wfYe1akdUoTzVyM10HmFlKkJxUSmng0CHZpc0zNLmmIdmim55ooA86JpjGgtxUbNVIAJqNzxSlqiY5pgIxqtKetSu2KryNkGmJlOY1m3kazRtG4yrAgitCc1RmPFUiTnNEl/svU5tMlYgSHzIieh9f0/lXYWt20UZQH5WrhPE0Mkd9aXseQEO0sP4TnINdRDMSgBPbNOrG6TOjD1LaGuQJF55FTW9qxwFOKpWs4I2sckVqW0oIGCBWD0OxO5rWkUmBgj3rrtBaSEL83HuK5vTodzBs8fzrqtMgJwOxrCpI6YI3zctcphiSPSqr6SLm5iyMgHNW7O3ZgCMc1rpbrCoJ44rE0ckkV9S1a28OaLd6rdnFvZQtKQOrYHAHuTgfjXzxaXt5f+JHvLlTJdXCNdT47l3OR+A6fSvYvibYveeD9TSEsS8a5BPBwwrhNG0+GK9kuRsdz+5JA6AVvTaSPPxNzptNkD26bWDKBwR6VpRk1nWqrGuAAB14FX4zxWpxlpTTwahQ1IDQA/NLnimClzQSOzRTc0UwPNWao2akd6jL1Qrji1Ru4prSVC8gHU0wQrNUEj9qHl4qvJKAOopibI5m61RmapZphyKpyyZqkS2VbyOOeJ45FDK3UGrKL+6QjoAKrSmr1ou+Bc+lDNaW4yObY+c8itG3ugSACfXA61Qlg5zjpVmwQrJkjd9KTSNlJpnaaLeEwYfAPpmut0u7UlTn7p4964fTiuOMA+npXR6bDO7DYrt6dq55xR1wm7HothPCwVzgcZGfWrXnG4Yqo+QdWB4PtWLpOlTSov2mTCY5Rf8AGtvYEAVV2oowAOlc78jRXb1MvxPD9p0HUo8D5rd8D6DNedaZGsFuiqDyMnPc16jeR+bYXC9S0TjH4GvLbeYDCngjgj0rWkjlxb1SNiFuhq3G9ZsEo9atxvx1rU5S+jVKr1TR6mV6ALQNBPNRK9Ln3oEyTNFMDUUxHljy1C04HfNVpJ+OTVd5/erJehae496hefFVXnpkaTXb+XBFJKx7ICTTE5E0lx6mq0k+e9dBp/gTVrzDzxtAh9Rlv8B+ddFZfDywt1D3MqFv+mjbj+Q4q1EVzzcLLOcRRvIf9lSamk0e5gga5vGjtIF6vKefoAOSfbrXrMWhW9tbFreMYPAbGOK4rx7p0y3WlrJEPswjkdDj/lpkZH5bfzpvTVjjHmdjjCyvzDblE7PNy7e+3oPpzWjYLuiAJz65qK5UKuAKl08EKPfrWd7nUoqOxZkgBHSnwR7T0qwLUSo+GcbgOQen0oji+fHegqxr6V8zivQNCtztDEDHYV5/pkEiyqygMM16PpEzeUgYKOKwqI2pnUWa5QDoBUkzjoOO1QWshRCeue/pUbyFpM4yPSsLGyZYkYCBh6gj9K82m+yWMpGprLJZt/y2j/1tt/tD+8vqp/CvQJ5cxkZ6Vx2qRKyuCoYHI5qoyaehM4Kasye/8F6hYxrcWUsd9buodHjOC6nkEdjWOl2Y3McilWU4IPBFen/DyHzPh7o6SndtjdVz2QOwUflTtS8N6VqkYF1ABJyolUcj05612+zuro8rms2mecxXQbvVmOYHoa0b/wAAXMO5rGYSKOcE5/Uc1iTWd9YHFxA4A/iHI/Os3FopSTNJXzT9/FZsN1nvVpJQ1SMshqKiDUUxHjJZncIis7McBVGSfwrd0/wPqV5te7K2UZ7PzJ/3yOn44rq9A0G30uMfZ4/3pGHnYfO309B7Cujt7FQBnrW6iZnM2fgzR7YKFs2upB1e4YkZ/wB0YFbtvp8trGEhSOBP7sSBR+lbVvaIO1TyRADPHFXawHPvbydXdm+pzUWwKeRituWIFen41Rmtic464oAns1WS12EdDWT4p0oavpD2sUOZ0PmxH0YdvxGR+NaunnY3lnoeasT2xcHb0PNG6EnZngl1ESw7Y657GltF25HcV6D4t8FyTu19p0e6U8zQAffP95ff1HeuBUGObBUgjggjBBrG1jrTUldGjayDIBzzUxTEgYVn+Z5UgGcA9K1YF81AQKRotjT0vbuBHeu40lwQoz0964nTsB14/Gux0uVFj9cis5mkDpomSOLG4n6015gqk9/Wss3mSEyDSXl/HDH8zDPtWFjW5ZmuwVIrlvEGopb27yKwZsYVR1LdAPrml1LX47eB3G1FAOWY81vfDfwJeaxfw+JNdgaCygIls7aUYaVu0jA9AOoB6nmtadK7M6tVQV2d9oemtoXhjTrGT/WQW6K4/wBrGT+pNMuTtt4h3Ys36/8A1qvahK1zOsKdWOPoKzruVZLjZH9xBsX/ABrs20PKvfUpuWQkglfpULTkg+YqSDuHXNWZkJqlKCcigZl3ukaVcOXNu0DH+KFsfpVNfDSyjNpegnssybc/iK2XtyxGe9WrWFUIzScEx3aOQurC805gt1AyA9G6qfoRxRXfhlZNpCsp6qwyD+FFR7LzF7R9jhLaEKBgc1rWloW5I/CiitUMtmLy+OlDx5X0zRRR1EyoY8HbUMsIRxxwaKKYiv5YBK46dK0LJxIfKcjd29xRRRYZNPYZU4HNcprvgvT9ZLSzI1vd9riIcn/eHRv5+9FFK1wTa1Rx+pfD7Wogfs9t9uQdHtuWH1U8j9aq6ZaXNmTDfWlxbuOP3sbL/MUUVlNWOulUcty/vjhJ+YVZi1wW64Ei0UVidOxasdYe5mKRB5WP8MalifpiuhsvBniPWvu2f2NG6yXZ24H+71NFFVCCbMa1VwWh2fhv4X6PosqXmosdTvEO5WmH7uM+qp0/E5rpr2/Lfu4h7ADvRRXSlZWR57k5O8ijMfsg8stm4m4c/wBxfT61UhgZzuxgGiikC2uPuYgkQ7ms1ly238aKKGNEG75j09BUyE4FFFNDHCXZgk8Zooopks//2Q==" class="avatar" alt="Arthur Prochnow Baumgardt">
+            <div style="font-size:13px; color:#555; margin-top:4px;">Visitor Count:</div>
             <div class="visitor-counter" id="counter">001337</div>
-            <br>
-            <div class="under-construction">
-              🚧 <span class="blink">UPDATING!</span>
-            </div>
+            <br><br>
+            <div class="under-construction">🚧 <span class="blink">UPDATING!</span></div>
           </td>
           <td class="profile-right">
-            <div class="name-banner">ARTHUR<br>PROCHNOW<br>BAUMGARDT</div>
+            <h1 class="name-banner">ARTHUR<br>PROCHNOW<br>BAUMGARDT</h1>
             <div class="subtitle">:: Software Engineer ::</div>
             <hr class="win95">
             <ul class="contact-list">
-              <li>📍 Porto Alegre, RS - Brasil</li>
+              <li>📍 Porto Alegre, RS — Brasil</li>
               <li>✉️ <a href="mailto:b_arthp@outlook.com">b_arthp@outlook.com</a></li>
               <li>🔗 <a href="https://linkedin.com/in/arthurpb" target="_blank">linkedin.com/in/arthurpb</a></li>
               <li>🐙 <a href="https://github.com/4rthb" target="_blank">github.com/4rthb</a></li>
             </ul>
             <hr class="win95">
-            <div style="font-size:15px; color:#444; margin-top:6px;">
-              <span class="stars">★★★</span> Computer Engineering student at UFRGS. Passionate about
-              distributed systems, HPC, and backend engineering. Experienced with
-              Go, Java, Python, C++. R&D Engineer @ IBOPE. <span class="stars">★★★</span>
+            <div style="font-size:16px; color:#333; margin-top:6px; line-height:1.4;">
+              <span class="stars">★★★</span>
+              Computer Engineering student at UFRGS, specializing in distributed systems,
+              backend engineering, and high-performance computing. Currently working as
+              R&amp;D Engineer at IBOPE. Experienced with Go, Java, Python, C++, and cloud-native architectures.
+              <span class="stars">★★★</span>
             </div>
-            <div class="best-viewed">
-              🖥️ Best Viewed in Netscape Navigator 4.0 | 800x600 | 256 Colors
-            </div>
+            <div class="best-viewed">🖥️ Best Viewed in Netscape Navigator 4.0 | 800×600 | 256 Colors</div>
           </td>
         </tr>
       </table>
@@ -457,10 +384,10 @@
 
   <div class="divider"></div>
 
-  <!-- EXPERIENCE WINDOW -->
+  <!-- EXPERIENCE -->
   <div class="window">
     <div class="title-bar">
-      <span>💼 My Experience.exe</span>
+      <span>💼 Experience.exe</span>
       <div class="title-bar-btns">
         <div class="title-bar-btn">_</div>
         <div class="title-bar-btn">□</div>
@@ -476,19 +403,19 @@
         <tr>
           <td>
             <div class="company-name">🏢 IBOPE</div>
-            <div class="job-title">R&D Engineer</div>
+            <div class="job-title">R&amp;D Engineer</div>
           </td>
           <td style="text-align:right">
-            <div class="job-date">📅 May 2026 – Present</div>
-            <div style="font-size:14px;color:var(--win-darker)">Porto Alegre, RS</div>
+            <div class="job-date">📅 May 2026 — Present</div>
+            <div style="font-size:14px;color:#555">Porto Alegre, RS</div>
           </td>
         </tr>
         <tr>
           <td colspan="2">
             <ul class="exp-bullets">
-              <li>Backend development with Go for R&D systems</li>
+              <li>Backend development with Go for research and data-intensive systems</li>
               <li>Search and analytics infrastructure using Elasticsearch</li>
-              <li>Relational data management with MySQL</li>
+              <li>Relational data management and schema design with MySQL</li>
             </ul>
           </td>
         </tr>
@@ -504,18 +431,17 @@
             <div class="job-title">Software Engineer Intern</div>
           </td>
           <td style="text-align:right">
-            <div class="job-date">📅 Jul 2023 – Mar 2025</div>
-            <div style="font-size:14px;color:var(--win-darker)">Porto Alegre, RS</div>
+            <div class="job-date">📅 Jul 2023 — Mar 2025</div>
+            <div style="font-size:14px;color:#555">Porto Alegre, RS</div>
           </td>
         </tr>
         <tr>
           <td colspan="2">
             <ul class="exp-bullets">
-              <li>Cloud-native microservices & async messaging systems in Go and Java (Spring)</li>
-              <li>PostgreSQL database architecture for real-time data systems</li>
-              <li>Custom observability tools and automation pipelines in Python</li>
+              <li>Built cloud-native microservices and async messaging systems using Go and Java (Spring)</li>
+              <li>Designed PostgreSQL database architecture for real-time data systems</li>
+              <li>Developed observability tools and automation pipelines in Python</li>
               <li>Containerized environments with Docker and Docker Compose</li>
-              <li>Automated data-intensive workflows with Python and Bash</li>
             </ul>
           </td>
         </tr>
@@ -531,16 +457,16 @@
             <div class="job-title">Software Engineer Intern</div>
           </td>
           <td style="text-align:right">
-            <div class="job-date">📅 Aug 2021 – Feb 2022</div>
-            <div style="font-size:14px;color:var(--win-darker)">Porto Alegre, RS</div>
+            <div class="job-date">📅 Aug 2021 — Feb 2022</div>
+            <div style="font-size:14px;color:#555">Porto Alegre, RS</div>
           </td>
         </tr>
         <tr>
           <td colspan="2">
             <ul class="exp-bullets">
-              <li>Optimized concurrent data processing pipelines → 80% runtime reduction!!</li>
-              <li>Backend services and APIs using Go, Python, and Delphi</li>
-              <li>Improved scheduling across multiple distributed microservices</li>
+              <li>Optimized concurrent data processing pipelines — 80% runtime reduction</li>
+              <li>Developed backend services and APIs in Go, Python, and Delphi</li>
+              <li>Improved task scheduling across distributed microservices</li>
             </ul>
           </td>
         </tr>
@@ -557,16 +483,16 @@
           </td>
           <td style="text-align:right">
             <div class="job-date">📅 May–Jul 2021 | Feb–Jul 2022</div>
-            <div style="font-size:14px;color:var(--win-darker)">Remote</div>
+            <div style="font-size:14px;color:#555">Remote</div>
           </td>
         </tr>
         <tr>
           <td colspan="2">
             <ul class="exp-bullets">
-              <li>C++ repo with Generics/Templates for heavy computational tasks</li>
-              <li>Implemented Number Theoretic Transform (NTT) + floating-point optimizations</li>
-              <li>GPU acceleration: CUDA, OpenMP, OpenCL</li>
-              <li>Benchmarking and performance analysis across parallelization strategies</li>
+              <li>Developed a C++ library using Generics/Templates for heavy computational tasks</li>
+              <li>Implemented Number Theoretic Transform (NTT) with floating-point optimizations for neural networks</li>
+              <li>Accelerated workloads with CUDA, OpenMP, and OpenCL</li>
+              <li>Benchmarked parallelization strategies across HPC environments</li>
             </ul>
           </td>
         </tr>
@@ -574,7 +500,7 @@
     </div>
   </div>
 
-  <!-- SKILLS WINDOW -->
+  <!-- SKILLS -->
   <div class="window">
     <div class="title-bar">
       <span>🛠️ Skills_and_Tools.ini</span>
@@ -585,33 +511,32 @@
       </div>
     </div>
     <div class="window-content">
-      <div class="section-title">💾 MY TECH STACK</div>
+      <div class="section-title">💾 TECH STACK</div>
       <br>
       <div class="skills-grid">
         <div class="skill-box">
           <div class="skill-box-title">◈ Languages</div>
-          <span class="skill-tag">C++</span>
           <span class="skill-tag">Go</span>
+          <span class="skill-tag">C++</span>
           <span class="skill-tag">Python</span>
           <span class="skill-tag">Java</span>
           <span class="skill-tag">SQL</span>
-          <span class="skill-tag">NoSQL</span>
           <span class="skill-tag">Bash</span>
+        </div>
+        <div class="skill-box">
+          <div class="skill-box-title">◈ Data & Search</div>
+          <span class="skill-tag">Elasticsearch</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">MongoDB</span>
         </div>
         <div class="skill-box">
           <div class="skill-box-title">◈ Cloud & DevOps</div>
           <span class="skill-tag">Docker</span>
           <span class="skill-tag">Kubernetes</span>
-          <span class="skill-tag">Git</span>
           <span class="skill-tag">Linux</span>
           <span class="skill-tag">CI/CD</span>
-        </div>
-        <div class="skill-box">
-          <div class="skill-box-title">◈ Concepts</div>
-          <span class="skill-tag">Distributed Systems</span>
-          <span class="skill-tag">Microservices</span>
-          <span class="skill-tag">Concurrency</span>
-          <span class="skill-tag">Perf. Optimization</span>
+          <span class="skill-tag">Git</span>
         </div>
         <div class="skill-box">
           <div class="skill-box-title">◈ HPC</div>
@@ -622,7 +547,7 @@
         </div>
       </div>
       <hr class="win95">
-      <div style="font-size:15px">
+      <div style="font-size:15px;">
         🌐 <b>Languages:</b>&nbsp;
         <span class="skill-tag">🇧🇷 Portuguese (Native)</span>
         <span class="skill-tag">🇺🇸 English (Full Professional)</span>
@@ -630,13 +555,11 @@
     </div>
   </div>
 
-  <!-- PROJECTS + EDUCATION two-col -->
+  <!-- PROJECTS + EDUCATION -->
   <div class="two-col">
-
-    <!-- PROJECTS -->
     <div class="window">
       <div class="title-bar">
-        <span>📁 My_Projects</span>
+        <span>📁 Projects</span>
         <div class="title-bar-btns">
           <div class="title-bar-btn">_</div>
           <div class="title-bar-btn">□</div>
@@ -650,18 +573,17 @@
           <div class="project-title">📂 INFinityDrive</div>
           <div class="job-title">Distributed File Sync Service</div>
           <hr class="win95">
-          <div class="project-desc">Engineered a distributed sync service with multi-threading and advanced concurrency control for file integrity.</div>
+          <div class="project-desc">Distributed file synchronization service with multi-threading and concurrency control to guarantee file integrity across nodes.</div>
         </div>
         <div class="project-box">
           <div class="project-title">📂 C Compiler</div>
           <div class="job-title">Multi-Stage Compiler from Scratch</div>
           <hr class="win95">
-          <div class="project-desc">Designed a full compiler with semantic analysis and machine code generation. Built from zero in C.</div>
+          <div class="project-desc">Full compiler built in C, covering lexical analysis, semantic validation, and native machine code generation.</div>
         </div>
       </div>
     </div>
 
-    <!-- EDUCATION -->
     <div class="window">
       <div class="title-bar">
         <span>🎓 Education.txt</span>
@@ -678,23 +600,22 @@
           <div class="project-title">🎓 UFRGS</div>
           <div class="job-title">Universidade Federal do Rio Grande do Sul</div>
           <hr class="win95">
-          <div class="job-date">📅 Aug 2019 – Jan 2026</div>
-          <div style="margin-top:4px; font-size:16px">
-            <b>Bachelor in Computer Engineering</b><br>
-            Porto Alegre, RS
+          <div class="job-date">📅 Aug 2019 — Jan 2026</div>
+          <div style="margin-top:4px; font-size:16px; line-height:1.4;">
+            <b>Bachelor in Computer Engineering</b><br>Porto Alegre, RS
           </div>
           <hr class="win95">
           <ul class="exp-bullets">
             <li>Thesis: ASD classification via gene expression data</li>
-            <li>Research: MASLAB (traffic simulations)</li>
-            <li>Research: MLab (ML for bioinformatics)</li>
+            <li>Research: MASLAB — urban traffic simulations</li>
+            <li>Research: MLab — Machine Learning for bioinformatics</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- RESEARCH WINDOW -->
+  <!-- RESEARCH -->
   <div class="window">
     <div class="title-bar">
       <span>📰 Research.doc</span>
@@ -710,35 +631,27 @@
       <div class="research-box">
         <div class="research-title">📄 Effectiveness of Feature Selection Methods for ASD Classification Using Gene Expression Data</div>
         <hr class="win95">
-        <div style="font-size:15px; margin-bottom:4px">
-          <b>Type:</b> Bachelor's Thesis — UFRGS (2026)
-        </div>
-        <div style="font-size:15px; margin-bottom:4px">
-          <b>Author:</b> Arthur Prochnow Baumgardt
-        </div>
+        <div style="margin-bottom:4px;"><b>Type:</b> Bachelor's Thesis — UFRGS (2026)</div>
+        <div style="margin-bottom:4px;"><b>Author:</b> Arthur Prochnow Baumgardt</div>
         <hr class="win95">
-        <div style="font-size:15px">
-          Investigates the effectiveness of different feature selection methods for classifying Autism Spectrum Disorder (ASD) using gene expression data, applying machine learning techniques in a bioinformatics context.
+        <div style="line-height:1.4;">
+          Investigates the effectiveness of different feature selection methods for classifying Autism Spectrum Disorder (ASD)
+          using gene expression data, applying machine learning techniques in a bioinformatics context.
         </div>
       </div>
-      <br>
       <div class="research-box">
-        <div class="research-title">📄 Using Car to Infrastructure Communication to Accelerate Learning in Route Choice</div>
+        <div class="research-title">📄 Using Car-to-Infrastructure Communication to Accelerate Learning in Route Choice</div>
         <hr class="win95">
-        <div style="font-size:15px; margin-bottom:4px">
-          <b>Journal:</b> Journal of Information and Data Management (2021)
-        </div>
-        <div style="font-size:15px; margin-bottom:4px">
-          <b>Authors:</b> Guilherme D. dos Santos, Ana L. C. Bazzan, <b>Arthur Prochnow Baumgardt</b>
-        </div>
+        <div style="margin-bottom:4px;"><b>Journal:</b> Journal of Information and Data Management (2021)</div>
+        <div style="margin-bottom:4px;"><b>Authors:</b> G. D. dos Santos, A. L. C. Bazzan, <b>Arthur Prochnow Baumgardt</b></div>
         <hr class="win95">
-        <div style="font-size:15px">
-          Uses car-to-infrastructure (C2I) communication + reinforcement learning (RL) to accelerate route choice learning in urban traffic networks. Results show the method outperforms baselines in reducing average travel cost.
+        <div style="line-height:1.4;">
+          Applies car-to-infrastructure (C2I) communication with reinforcement learning to accelerate route choice in urban traffic networks.
+          Results consistently outperform baselines in reducing average travel cost.
         </div>
-        <div style="margin-top:6px">
-          <a href="https://www.semanticscholar.org/paper/Using-Car-to-Infrastructure-Communication-to-in-Santos-Bazzan/60c96f352c1f426f3aa2b0035c3de3c9974ee381" target="_blank" style="color:var(--win-blue); font-size:15px">
-            🔗 View on Semantic Scholar
-          </a>
+        <div style="margin-top:6px;">
+          <a href="https://www.semanticscholar.org/paper/Using-Car-to-Infrastructure-Communication-to-in-Santos-Bazzan/60c96f352c1f426f3aa2b0035c3de3c9974ee381"
+             target="_blank" style="color:#000080; font-size:15px;">🔗 View on Semantic Scholar</a>
         </div>
       </div>
     </div>
@@ -757,29 +670,23 @@
     <div class="window-content">
       <div class="section-title">✍️ SIGN MY GUESTBOOK!!!</div>
       <br>
-      <div style="font-size:16px; margin-bottom:6px">
-        Leave a message!! (totally works!! 😂)
-      </div>
-      <textarea class="guestbook" placeholder="Type your message here and click OK..."></textarea>
+      <div style="font-size:16px; margin-bottom:6px;">Leave a message!!</div>
+      <textarea class="guestbook" placeholder="Type your message here..."></textarea>
       <br>
       <button class="win-btn" onclick="alert('Message sent!! Thanks for visiting!! 🎉')">OK</button>
       <button class="win-btn" onclick="document.querySelector('.guestbook').value=''">Cancel</button>
       <hr class="win95">
-      <div style="font-size:14px; color:var(--win-darker); text-align:center; margin-top:6px">
-        <span class="blink">★</span>
-        Page last updated: May 2025 &nbsp;|&nbsp;
-        Made with ❤️ and Notepad &nbsp;|&nbsp;
-        <span class="blink">★</span>
+      <div style="font-size:14px; color:#555; text-align:center; margin-top:6px;">
+        <span class="blink">★</span> Last updated: May 2026 &nbsp;|&nbsp; Made with ❤️ and Notepad &nbsp;|&nbsp; <span class="blink">★</span>
         <br><br>
         <span class="under-construction">🚧 THIS PAGE IS ALWAYS UNDER CONSTRUCTION 🚧</span>
       </div>
     </div>
   </div>
 
-</div><!-- /desktop -->
+</div>
 
 <script>
-  // Clock
   function updateClock() {
     const now = new Date();
     const h = String(now.getHours()).padStart(2,'0');
@@ -789,7 +696,6 @@
   updateClock();
   setInterval(updateClock, 10000);
 
-  // Fake visitor counter
   let count = 1337;
   function animateCounter() {
     count += Math.floor(Math.random() * 3) + 1;

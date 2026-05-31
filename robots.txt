@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://arthurpb.dev.br/sitemap.xml
